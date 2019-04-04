@@ -1,0 +1,245 @@
+## 常用数学公式和符号表示
+### 1. 上下标
+<font size="4">
+
+^表示上标，_表示下标，如果上（下）标内容多于一个字符就需要使用{}，注意不是( ), 因为( )经常是公式本身组成部分，为避免冲突，所以选用了{ } 将其包起来。
+
+**示例：**
+> $x^{y^z}=(1+e^x)^{-2xy^w}$
+
+**效果：**
+
+```math
+ x^{y^z}=(1+e^x)^{-2xy^w}
+```
+
+上面输入的上下标都是在字符的右侧，要想在左侧或者两侧都写上下标，那么需要使用\sideset语法。
+
+**示例：**
+> $\sideset{^1_2}{^3_4}\bigotimes$
+
+</font>
+
+### 2. 括号和分隔符
+<font size="4">
+( )和[ ]就是自身了，由于{ } 是Tex的元字符，所以表示它自身时需要转义。
+
+**示例：**
+> $f(x,y) = x^2 + y^2, x\epsilon[0,100]$
+
+**效果：**
+
+```math
+ f(x,y) = x^2 + y^2, x\epsilon[0,100]
+```
+
+有时候括号需要大号的，普通括号不好看，此时需要使用\left和\right加大括号的大小。
+
+**示例：**
+> $(\frac{x}{y})^8$，$\left(\frac{x}{y}\right)^8$
+
+</font>
+
+### 3. 分数、开方、省略号
+<font size="4">
+使用\frac{分子}{分母}格式，或者 分子\over 分母。
+
+**示例：**
+> $\frac{1}{2x+1}$或者$1\over{2x+1}$
+
+**效果：**
+
+```math
+ 1\over{2x+1}
+```
+
+开方表示
+
+**示例：**
+> $\sqrt[9]{3}$ 和 $\sqrt{3}$
+
+**效果：**
+
+```math
+ \sqrt[9]{3} <or> \sqrt{3}
+```
+
+省略号表示
+
+**示例：**
+> $f(x_1, x_2, \ldots, x_n)=x_1^2 + x_2^2+ \cdots + x_n^2$
+
+**效果：**
+
+```math
+ f(x_1, x_2, \ldots, x_n)=x_1^2 + x_2^2+ \cdots + x_n^2
+```
+</font>
+
+### 4. 矢量、积分、极限、累加、累乘、希腊字母
+<font size="4">
+矢量表示：
+
+**示例：**
+> $\vec{a} \cdot \vec{b}=0$
+
+**效果：**
+
+```math
+ \vec{a} \cdot \vec{b}=0
+```
+
+积分表示
+
+**示例：**
+> $\int_0^1x^2{\rm d}x $
+
+**效果：**
+
+```math
+ \int_0^1x^2{\rm d}x 
+```
+
+极限表示
+
+**示例：**
+> $\lim_{n\rightarrow+\infty}\frac{1}{n(n+1)}$
+
+**效果：**
+
+```math
+ \lim_{n\rightarrow+\infty}\frac{1}{n(n+1)}
+```
+
+累加、累乘表示
+
+**示例：**
+> $\sum_1^n\frac{1}{x^2}$， $\prod_{i=0}^n\frac{1}{x^2}$
+
+**效果：**
+
+```math
+ \sum_1^n\frac{1}{x^2} , \prod_{i=0}^n\frac{1}{x^2}
+```
+
+希腊字母表示
+
+**示例：**
+> $$\alpha　A　\beta　B　\gamma　\Gamma　\delta　\Delta　\epsilon　E \varepsilon　　\zeta　Z　\eta　H　\theta　\Theta　\vartheta 
+
+**效果：**
+
+```math
+ \alpha,A,\beta,B,\gamma,\Gamma,\delta,\Delta,\epsilon,E,\varepsilon,\zeta,Z,\eta,H,\theta,\Theta,\vartheta
+```
+</font>
+
+### 5. 常用数学符号
+<pre>
+<font size="4">
+± ：\pm
+× ：\times
+÷：\div
+∣：\mid
+⋅：\cdot
+∘：\circ
+∗: \ast
+⨀：\bigodot
+⨂：\bigotimes
+⨁：\bigoplus
+≤：\leq
+≥：\geq
+≠：\neq
+≈：\approx
+≡：\equiv
+∑：\sum
+∏：\prod
+∐：\coprod
+
+<b>集合运算符：</b>
+∅：\emptyset
+∈：\in
+∉：\notin
+⊂：\subset
+⊃ ：\supset
+⊆ ：\subseteq
+⊇ ：\supseteq
+⋂ ：\bigcap
+⋃ ：\bigcup
+⋁ ：\bigvee
+⋀ ：\bigwedge
+⨄ ：\biguplus
+⨆：\bigsqcup
+
+<b>对数运算符：</b>
+log ：\log
+lg ：\lg
+ln ：\ln
+
+<b>三角运算符：</b>
+⊥：\bot
+∠：\angle
+30∘：30^\circ
+sin ：\sin
+cos ：\cos
+tan ：\tan
+cot ：\cot
+sec ：\sec
+csc ：\csc
+
+<b>微积分运算符：</b>
+y′x：\prime
+∫：\int
+∬ ：\iint
+∭ ：\iiint
+∬∬：\iiiint
+∮ ：\oint
+lim ：\lim
+∞ ：\infty
+∇：\nabla
+
+<b>逻辑运算符：</b>
+∵：\because
+∴ ：\therefore
+∀ ：\forall
+∃ ：\exists
+≠ ：\not=
+≯：\not>
+⊄：\not\subset
+
+<b>戴帽符号：</b>
+y^ ：\hat{y}
+\check{y} ：\check{y}
+y˘ ：\breve{y}
+
+<b>连线符号：</b>
+a+b+c+d¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯：\overline{a+b+c+d}
+a+b+c+d−−−−−−−−−− ：\underline{a+b+c+d} 
+
+<b>箭头符号：</b>
+↑：\uparrow
+↓：\downarrow
+⇑ ：\Uparrow
+⇓：\Downarrow
+→：\rightarrow
+← ：\leftarrow
+⇒ ：\Rightarrow
+⇐ ：\Leftarrow
+⟶ ：\longrightarrow
+⟵ ：\longleftarrow
+⟹：\Longrightarrow
+⟸ ：\Longleftarrow
+
+<b>使用指定字体</b>
+{\rm text}如：
+使用罗马字体：text ${\rm text}$
+其他的字体还有：
+\rm　　罗马体　　　　　　　\it　　意大利体
+\bf　　黑体　　　　　　　　\cal 　花体
+\sl　　倾斜体　　　　　　　\sf　　等线体
+\mit 　数学斜体　　　　　　\tt　　打字机字体
+\sc　　小体大写字母
+</font>
+</pre>
+
+
